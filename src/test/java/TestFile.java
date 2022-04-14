@@ -15,9 +15,9 @@ public class TestFile
     public void test1() {
 
         System.out.println();
-        System.out.println();
+        System.out.println(System.getenv("UT_ID_Username"));
         System.out.println("Test Test Test");
-        System.out.println();
+        System.out.println(System.getenv("UT_ID_Password"));
         System.out.println();
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
