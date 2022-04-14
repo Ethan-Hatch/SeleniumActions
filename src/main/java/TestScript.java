@@ -12,6 +12,7 @@ public class TestScript {
 
     public static void main(String[] args) {
         Map<String, String> env = System.getenv();
+        System.out.println("Hello World");
 //        for (String envName : env.keySet()) {
 //            //System.out.println(envName + ": " + env.get(envName));
 //            System.out.format("%s=%s%n", envName, env.get(envName));
