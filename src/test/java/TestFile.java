@@ -14,6 +14,11 @@ public class TestFile
     @Test
     public void test1() {
 
+        System.out.println();
+        System.out.println();
+        System.out.println("Test Test Test");
+        System.out.println();
+        System.out.println();
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--no-sandbox");
