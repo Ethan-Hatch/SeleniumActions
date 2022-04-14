@@ -32,7 +32,8 @@ jobs:
     - name: Build with Maven
       run: | 
        mvn -B package --file pom.xml
-       java -cp java ${{ env.selenium-script }}
+       
+#      java -cp java ${{ env.selenium-script }}
       
 #     - name: Run Script and Check for Secrets
 #       run: java -cp java ${{ env.selenium-script }}
