@@ -33,6 +33,13 @@ jobs:
       run: | 
        mvn -B install --file pom.xml
        
+    - name: Cache the Maven Packages to Speed Up Build
+      uses: actions/cache@v1
+      with:
+        path: ~/.m2
+        key: ${{ runner.os }}-m2-${{ hashfiles('**/pom.xml') }}
+        restore-keys: ${{ runner.os }}-m2
+       
 #      java -cp java ${{ env.selenium-script }}
       
 #     - name: Run Script and Check for Secrets
