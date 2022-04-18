@@ -31,7 +31,9 @@ public class TestFile
         driver.manage().window().maximize();
         driver.get(baseUrl);
         System.out.println();
-        System.out.println(driver.getCurrentUrl());
+        System.out.println("CURRENT URL ----> " + driver.getCurrentUrl());
+        System.out.println("PAGE TITLE ----> " + driver.getTitle());
+        System.out.println("PAGE SOURCE ----> " + driver.getPageSource());
         driver.close();
     }
 }
