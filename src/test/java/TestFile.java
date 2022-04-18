@@ -30,6 +30,8 @@ public class TestFile
         driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
         driver.manage().window().maximize();
         driver.get(baseUrl);
+        System.out.println();
+        System.out.println(driver.getCurrentUrl());
         driver.close();
     }
 }
