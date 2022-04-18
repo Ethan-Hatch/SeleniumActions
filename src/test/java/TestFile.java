@@ -1,39 +1,65 @@
 
+import java.time.Duration;
 import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class TestFile
 {
     public WebDriver driver;
-    public String baseUrl = "https://www.lambdatest.com/";
+    public WebDriverWait wait;
+    public JavascriptExecutor js;
 
-    @Test
-    public void test1() {
+//    public String baseUrl = "https://www.lambdatest.com/";
+    private String UT_ID_U = System.getenv("UT_ID_username");
+    private String UT_ID_P = System.getenv("UT_ID_password");
 
-        System.out.println();
-        System.out.println(System.getenv("UT_ID_username"));
-        System.out.println("Test Test Test");
-        System.out.println(System.getenv("UT_ID_password"));
-        System.out.println();
-        System.out.println("Test Test Test");
+    @BeforeClass
+    public void testSetup() {
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--no-sandbox");
         options.addArguments("--disable-dev-shm-usage");
         options.addArguments("--headless");
         driver = new ChromeDriver(options);
+        js = (JavascriptExecutor) driver;
+    }
 
+    @BeforeMethod
+    public void openBrowser() {
         driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
         driver.manage().window().maximize();
-        driver.get(baseUrl);
+        driver.get("https://test-mybenefits.dts.utah.gov/EligibilityLookupTool/");
+        System.out.println("~~~~~~~~~~~");
+        System.out.println("Current URL ----> " + driver.getCurrentUrl());
+        System.out.println("~~~~~~~~~~~");
+    }
+
+
+    @Test
+    public void test1() {
+
+//        WebDriverManager.chromedriver().setup();
+//        ChromeOptions options = new ChromeOptions();
+//        options.addArguments("--no-sandbox");
+//        options.addArguments("--disable-dev-shm-usage");
+//        options.addArguments("--headless");
+//        driver = new ChromeDriver(options);
+
+//        driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
+//        driver.manage().window().maximize();
         System.out.println();
         System.out.println("CURRENT URL ----> " + driver.getCurrentUrl());
         System.out.println("PAGE TITLE ----> " + driver.getTitle());
-        System.out.println("PAGE SOURCE ----> " + driver.getPageSource());
+//        System.out.println("PAGE SOURCE ----> " + driver.getPageSource());
         driver.close();
     }
 }
