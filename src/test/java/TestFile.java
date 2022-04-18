@@ -19,6 +19,7 @@ public class TestFile
         System.out.println("Test Test Test");
         System.out.println(System.getenv("UT_ID_password"));
         System.out.println();
+        System.out.println("Test Test Test");
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--no-sandbox");
