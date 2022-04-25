@@ -37,7 +37,8 @@ public class TestFile
     public void openBrowser() {
         driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
         driver.manage().window().maximize();
-        driver.get("https://test-mybenefits.dts.utah.gov/EligibilityLookupTool/");
+        driver.get("https://google.com");
+        //driver.get("https://test-mybenefits.dts.utah.gov/EligibilityLookupTool/");
         System.out.println("~~~~~~~~~~~");
         System.out.println("Current URL ----> " + driver.getCurrentUrl());
         System.out.println("~~~~~~~~~~~");
