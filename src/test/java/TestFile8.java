@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
 
-public class TestFile4
+public class TestFile8
 {
     public WebDriver driver;
     public WebDriverWait wait;
@@ -35,7 +35,7 @@ public class TestFile4
     public void openBrowser() {
 
         System.out.println("~~~~~~~~~~~");
-        System.out.println("Current Test ----> 4");
+        System.out.println("Current Test ----> 8");
         System.out.println("~~~~~~~~~~~");
 
 

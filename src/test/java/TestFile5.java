@@ -33,6 +33,12 @@ public class TestFile5
 
     @BeforeMethod
     public void openBrowser() {
+
+        System.out.println("~~~~~~~~~~~");
+        System.out.println("Current Test ----> 5");
+        System.out.println("~~~~~~~~~~~");
+
+
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         driver.manage().window().maximize();
         driver.get("https://google.com");

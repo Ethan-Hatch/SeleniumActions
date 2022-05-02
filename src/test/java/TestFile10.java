@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
 
-public class TestFile4
+public class TestFile10
 {
     public WebDriver driver;
     public WebDriverWait wait;
@@ -35,9 +35,8 @@ public class TestFile4
     public void openBrowser() {
 
         System.out.println("~~~~~~~~~~~");
-        System.out.println("Current Test ----> 4");
+        System.out.println("Current Test ----> 10");
         System.out.println("~~~~~~~~~~~");
-
 
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         driver.manage().window().maximize();
