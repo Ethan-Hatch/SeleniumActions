@@ -37,7 +37,7 @@ jobs:
 #         restore-keys: |
 #           ${{ runner.os }}-maven-
         
-    - name: Build with Maven
+    - name: Build and Run Scripts
       run: | 
        mvn -B install --file pom.xml
        
