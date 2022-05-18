@@ -45,6 +45,7 @@ public class TestFile10
         System.out.println("~~~~~~~~~~~");
         System.out.println("Current URL ----> " + driver.getCurrentUrl());
         System.out.println("~~~~~~~~~~~");
+        System.out.println("~~~~~~~~~~~");
     }
 
 
