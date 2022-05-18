@@ -37,6 +37,7 @@ public class TestFile
     public void openBrowser() {
 
         System.out.println("~~~~~~~~~~~");
+        System.out.println("~~~~~~~~~~~");
         System.out.println("Current Test ----> 1");
         System.out.println("~~~~~~~~~~~");
 
