@@ -12,7 +12,7 @@ on:
 jobs:
   build:
     env: 
-      selenium-script: ./src/main/java/TestScript.java
+#       selenium-script: ./src/main/java/TestScript.java
       UT_ID_username: ${{ secrets.UTAH_ID_USER }}
       UT_ID_password: ${{ secrets.UTAH_ID_PASS }}
 
